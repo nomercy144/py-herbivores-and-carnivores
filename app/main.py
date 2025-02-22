@@ -1,3 +1,6 @@
+from typing import Callable
+
+
 class Animal:
     alive = []
 
@@ -23,7 +26,7 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, other: Herbivore) -> None:
+    def bite(self, other: Callable) -> None:
         if isinstance(other, Carnivore):
             pass
         elif other.hidden is False:
